@@ -14,29 +14,29 @@ const htmlContent = `
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
-    <div class="container mx-auto px-4 py-12">
-        <h1 class="text-4xl font-bold text-center mb-10 text-blue-600">Interactive Story and Image Generator</h1>
+	<div class="container mx-auto px-4 py-12">
+		<h1 class="text-4xl font-bold text-center mb-10 text-blue-600">Interactive Story and Image Generator</h1>
 
-        <div id="generator" class="mb-12">
-            <h2 class="text-3xl font-bold mb-4 text-gray-800">Generate Story and Image</h2>
-            <div class="flex space-x-4 mb-4">
-                <input type="text" id="input-prompt" placeholder="Enter a prompt for the story and image" class="flex-1 px-4 py-3 border rounded shadow">
-                <button id="generate-both" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded shadow-lg">Generate</button>
-            </div>
-        </div>
-
-        <div id="loader" class="text-center hidden mb-6">
-            <p class="text-lg font-semibold">Generating content, please wait...</p>
-        </div>
-
-        <div id="story-output-container" class="mb-8 hidden shadow-lg rounded-lg overflow-hidden">
-            <h2 class="text-2xl font-bold mb-3 bg-blue-500 text-white p-4">Story Output</h2>
-			<div class="flex space-x-4 p-4 bg-gray-100">
-            	<div id="story-output" class="bg-white p-6 border-t border-gray-200 1/2 w-full" style="height: full; overflow-y: auto;"></div>
-				<img id="generated-image" src="https://via.placeholder.com/735x735?text=Generating..." alt="" class="w-1/2 rounded-lg shadow-lg">
+		<div id="generator" class="mb-12">
+			<h2 class="text-3xl font-bold mb-4 text-gray-800">Generate Story and Image</h2>
+			<div class="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0 md:items-center">
+				<input type="text" id="input-prompt" placeholder="Enter a prompt for the story and image" class="flex-1 px-4 py-3 border rounded shadow">
+				<button id="generate-both" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded shadow-lg">Generate</button>
 			</div>
-        </div>
-    </div>
+		</div>
+
+		<div id="loader" class="text-center hidden mb-6">
+			<p class="text-lg font-semibold">Generating content, please wait...</p>
+		</div>
+
+		<div id="story-output-container" class="mb-8 hidden shadow-lg rounded-lg overflow-hidden">
+			<h2 class="text-2xl font-bold mb-3 bg-blue-500 text-white p-4">Story Output</h2>
+			<div class="flex flex-col md:flex-row md:space-x-4 p-4 bg-gray-100">
+				<div id="story-output" class="bg-white p-6 border-t border-gray-200 md:w-1/2" style="height: full; overflow-y: auto;"></div>
+				<img id="generated-image" src="https://via.placeholder.com/735x735?text=Generating..." alt="" class="w-full md:w-1/2 rounded-lg shadow-lg">
+			</div>
+		</div>
+	</div>
 
     <script>
     document.getElementById('generate-both').addEventListener('click', function() {
