@@ -1,1 +1,0 @@
-# cloudflare-ai-worker-demo
