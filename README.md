@@ -6,6 +6,8 @@ This application combines two AI models to generate stories and images based on 
 
 [Story and Image Generator](https://story-tell-api.bobbyiliev.workers.dev/)
 
+![](https://imgur.com/Ax7c9fZ.gif)
+
 ## Features
 
 - Generate stories and images by providing a prompt.
